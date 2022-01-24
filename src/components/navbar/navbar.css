@@ -1,0 +1,21 @@
+.navbar {
+    position: relative;
+    height: 5vh;
+    position: sticky;
+}
+
+#logo {
+    position: absolute;
+    left: 50%;
+    padding-top: 30px;
+    margin-left: -50px;
+
+}
+
+#timeDisplay {
+    position: absolute;
+    left: 48.5%;
+    margin-left: -48.5px;
+    margin-top: 70px;
+}
+
