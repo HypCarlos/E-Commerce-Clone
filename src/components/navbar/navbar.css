@@ -1,6 +1,6 @@
 .navbar {
     position: relative;
-    height: 5vh;
+    height: 7vh;
     position: sticky;
 }
 
@@ -17,5 +17,11 @@
     left: 48.5%;
     margin-left: -48.5px;
     margin-top: 70px;
+}
+
+.Cart{
+    position: absolute;
+    right: 100px;
+    margin-top: 20px;
 }
 

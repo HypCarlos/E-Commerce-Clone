@@ -1,18 +1,22 @@
+import { BrowserRouter, Route } from "react-router-dom";
+import "./App.css";
+import Footer from "./components/footer/Footer";
 
-import './App.css';
-import Footer from './components/footer/Footer';
-import Main from './components/main/Main';
-import Navbar from './components/navbar/Navbar';
-import ProductList from './components/productList/ProductList';
+import Navbar from "./components/navbar/Navbar";
+import ProductScreen from "./screens/ProductScreen";
+import HomeScreen from "./screens/HomeScreen";
 
 function App() {
   return (
-    <div className="App">
-     <Navbar/>
-     <Main/>
-     <ProductList/>
-     <Footer/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        
+        <Route path="/product/:id" component={ProductScreen}></Route>
+        <Route path="/" component={HomeScreen} exact></Route>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
