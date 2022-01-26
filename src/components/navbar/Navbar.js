@@ -20,7 +20,9 @@ function Navbar() {
         </div>
       </div>
       <div className="Cart">
-    <a href="/Cart">Cart</a>
+        <a href="/Cart">
+          <i class="large material-icons">shopping_cart</i>
+        </a>
       </div>
     </div>
   );
