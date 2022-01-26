@@ -1,5 +1,4 @@
 .main {
-  
   position: relative;
   display: flex;
   height: 60vh;
@@ -8,14 +7,13 @@
 
 .main-vid {
   position: absolute;
-  margin-top: 50px;
-  top: 40%;
-  left: 49%;
+  margin-top: 20px;
+  top: 55%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
 iframe {
   border-radius: 100px;
   object-fit: cover;
-  
 }

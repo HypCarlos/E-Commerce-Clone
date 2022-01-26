@@ -1,0 +1,25 @@
+.product-details{
+    /* background-color: blue; */
+    display: flex;
+    height: 90vh;
+    
+}
+
+.product-left{
+    flex: 1;
+}
+
+
+.product-right{
+    flex: 1;
+}
+
+.product-image{
+    margin:25% 60%;
+    justify-content: center;
+    
+}
+
+.product-desc{
+    margin: 25% 10%;
+}

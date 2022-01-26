@@ -2,21 +2,21 @@
     position: relative;
     height: 7vh;
     position: sticky;
+    display: flex;
+    justify-content: center;
+    
 }
 
 #logo {
     position: absolute;
-    left: 50%;
     padding-top: 30px;
-    margin-left: -50px;
-
+    
+    
 }
 
 #timeDisplay {
-    position: absolute;
-    left: 48.5%;
-    margin-left: -48.5px;
     margin-top: 70px;
+    margin-left: -20px;
 }
 
 .Cart{
