@@ -13,7 +13,7 @@ export default function ProductScreen(props) {
       <div className="product-details">
       <div className="product-left">
         <div className="product-image">
-          <img className="large" src={product.img} alt= {product.id}/>
+          <img className="large" src={product.img} alt= {product.id} height="430px"/>
         </div>
       </div>
       <div className="product-right">
@@ -25,7 +25,10 @@ export default function ProductScreen(props) {
         <h3>{product.shipTime}</h3><br></br><br/>
         <div className="size-dd">
           <h3>SIZE</h3><br></br>
-          <form>
+
+          {product.inv > 0 ? (
+              <span className="success">
+              <form>
             <select name= "variant">
               <option value= "SMALL">S</option>
               <option value= "MEDIUM">M</option>
@@ -35,6 +38,16 @@ export default function ProductScreen(props) {
             <br></br><br/>
             <button>ADD TO CART</button>
           </form>
+              </span>
+            ) : (
+            <h3><span className="error">OUT OF STOCK</span></h3>
+        
+            )}
+          
+
+          <div>
+           
+          </div>
         </div>
 
 

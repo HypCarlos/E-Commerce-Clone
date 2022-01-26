@@ -7,7 +7,8 @@ export const products = [
         material: "100% COTTON DOUBLE-LAYERED HOODIE",
         gender: "UNISEX",
         shipTime: "SHIPS IN 2 WEEKS",
-        price: 90.00
+        price: 90.00,
+        inv: 100
     },
     {
         id:2,
@@ -16,7 +17,8 @@ export const products = [
         material: "100% COTTON DOUBLE-LAYERED HOODIE",
         gender: "UNISEX",
         shipTime: "SHIPS IN 3 WEEKS",
-        price: 90.00
+        price: 90.00,
+        inv: 0
     },
     {
         id:3,
@@ -25,7 +27,8 @@ export const products = [
         material: "100% COTTON DOUBLE-LAYERED HOODIE",
         gender: "UNISEX",
         shipTime: "SHIPS IN 4 WEEKS",
-        price: 90.00
+        price: 90.00,
+        inv: 100
     },
 
 {
@@ -35,7 +38,8 @@ export const products = [
         material: "100% COTTON DOUBLE-LAYERED HOODIE",
         gender: "UNISEX",
         shipTime: "SHIPS IN 5 WEEKS",
-        price: 90.00
+        price: 90.00,
+        inv: 100
     }
    
 
