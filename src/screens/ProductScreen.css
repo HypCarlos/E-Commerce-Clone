@@ -4,7 +4,10 @@
     height: 90vh;
     
 }
-
+.back-btn{
+    position: absolute;
+    margin: 40px 80px;
+}
 .product-left{
     flex: 1;
 }

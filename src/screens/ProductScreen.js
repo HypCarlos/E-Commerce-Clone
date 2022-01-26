@@ -1,6 +1,7 @@
 import React from "react";
 import {products} from "../data";
 import "../screens/ProductScreen.css";
+import { Link } from 'react-router-dom';
 
 export default function ProductScreen(props) {
 
@@ -11,6 +12,9 @@ export default function ProductScreen(props) {
   return (
     <div className="product-screen">
       <div className="product-details">
+      <div className = "back-btn">
+        <Link to= "/">Back</Link>
+      </div>
       <div className="product-left">
         <div className="product-image">
           <img className="large" src={product.img} alt= {product.id} height="430px"/>
