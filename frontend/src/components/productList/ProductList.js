@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from 'axios';
 import "../productList/productList.css";
 import Product from "../product/Product";
-import { products, Products } from "../../data";
+
 
 function ProductList() {
+
+  const [productsB, setProducts] = useState( [] );
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await axios.get('/api/products');
+      setProducts(data);
+    };
+    fetchData();
+  }, []);
   return (
     <div className="pl">
       <div className="pl-list">
-        {products.map((item) => (
+        {productsB.map((item) => (
             <a href={`/product/${item.id}`}>
           <Product key={item.id} img={item.img} Link={item.link} />
           </a>
