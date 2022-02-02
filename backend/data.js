@@ -8,7 +8,7 @@ export const products = [
         gender: "UNISEX",
         shipTime: "SHIPS IN 2 WEEKS",
         price: 90.00,
-        inv: 100
+        inv: 20
     },
     {
         id:2,

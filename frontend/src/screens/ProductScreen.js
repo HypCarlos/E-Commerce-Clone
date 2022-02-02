@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { products } from "../data";
 import "../screens/ProductScreen.css";
 import { Link } from "react-router-dom";
 
 export default function ProductScreen(props) {
+  // const [qty, setQty] = useState(1);
   const product = products.find((x) => x.id == props.match.params.id);
+  const productId = props.match.params.id;
+  const [qty, setQty] = useState(1);
   if (!product) {
     return <div>PRODUCT NOT FOUND</div>;
   }
+
+  const addToCartHandler = () => {
+    props.history.push(`/Cart/${productId}?qty=${qty}`);
+  };
+
   return (
     <div className="product-screen">
       <div className="product-details">
@@ -50,10 +58,23 @@ export default function ProductScreen(props) {
                       <option value="MEDIUM">M</option>
                       <option value="LARGE">L</option>
                       <option value="X-LARGE">XL</option>
-                    </select>
+                      </select>
+                      {/* <select
+                              value={qty}
+                              onChange={(e) => setQty(e.target.value)}
+                            >
+                              {[...Array(product.inv).keys()].map(
+                                (x) => (
+                                  <option key={x + 1} value={x + 1}>
+                                    {x + 1}
+                                  </option>
+                                )
+                              )}
+                            </select> */}
+
                     <br></br>
                     <br />
-                    <button>ADD TO CART</button>
+                    <button onClick={addToCartHandler}>ADD TO CART</button>
                   </form>
                 </span>
               ) : (
