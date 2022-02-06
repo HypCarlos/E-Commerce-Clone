@@ -1,22 +1,35 @@
-import React, { useState } from "react";
-import { products } from "../data";
+import React, { useEffect} from "react";
 import "../screens/ProductScreen.css";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { detailsProduct } from "../components/actions/productActions";
 
 export default function ProductScreen(props) {
   // const [qty, setQty] = useState(1);
-  const product = products.find((x) => x.id == props.match.params.id);
+  const dispatch = useDispatch();
+  const productDetails = useSelector( state => state.productDetails);
+  const {product} = productDetails;
   const productId = props.match.params.id;
-  const [qty, setQty] = useState(1);
-  if (!product) {
-    return <div>PRODUCT NOT FOUND</div>;
-  }
+  // const [qty, setQty] = useState(1);
+  // if (!product) {
+  //   return <div>PRODUCT NOT FOUND</div>;
+  // }
 
-  const addToCartHandler = () => {
-    props.history.push(`/Cart/${productId}?qty=${qty}`);
-  };
+
+
+  useEffect(() => {
+    dispatch(detailsProduct(productId));
+    
+  }, [dispatch, productId]);
+
+
+  // const addToCartHandler = () => {
+  //   props.history.push(`/Cart/${productId}?qty=${qty}`);
+  // };
 
   return (
+
+    
     <div className="product-screen">
       <div className="product-details">
         <div className="back-btn">
@@ -74,7 +87,7 @@ export default function ProductScreen(props) {
 
                     <br></br>
                     <br />
-                    <button onClick={addToCartHandler}>ADD TO CART</button>
+                    <button >ADD TO CART</button>
                   </form>
                 </span>
               ) : (
