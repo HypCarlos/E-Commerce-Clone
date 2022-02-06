@@ -1,16 +1,15 @@
-import React, { useEffect} from "react";
+import React, { useEffect, useState} from "react";
 import "../screens/ProductScreen.css";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { detailsProduct } from "../components/actions/productActions";
 
 export default function ProductScreen(props) {
-  // const [qty, setQty] = useState(1);
+  const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
   const productDetails = useSelector( state => state.productDetails);
   const {product} = productDetails;
   const productId = props.match.params.id;
-  // const [qty, setQty] = useState(1);
   // if (!product) {
   //   return <div>PRODUCT NOT FOUND</div>;
   // }
@@ -23,9 +22,9 @@ export default function ProductScreen(props) {
   }, [dispatch, productId]);
 
 
-  // const addToCartHandler = () => {
-  //   props.history.push(`/Cart/${productId}?qty=${qty}`);
-  // };
+  const addToCartHandler = () => {
+    props.history.push(`/Cart/${productId}?qty=${qty}`);
+  };
 
   return (
 
@@ -72,7 +71,7 @@ export default function ProductScreen(props) {
                       <option value="LARGE">L</option>
                       <option value="X-LARGE">XL</option>
                       </select>
-                      {/* <select
+                      <select
                               value={qty}
                               onChange={(e) => setQty(e.target.value)}
                             >
@@ -83,11 +82,11 @@ export default function ProductScreen(props) {
                                   </option>
                                 )
                               )}
-                            </select> */}
+                            </select>
 
                     <br></br>
                     <br />
-                    <button >ADD TO CART</button>
+                    <button onClick={addToCartHandler}>ADD TO CART</button>
                   </form>
                 </span>
               ) : (
