@@ -71,7 +71,7 @@ export default function ProductScreen(props) {
                       <option value="LARGE">L</option>
                       <option value="X-LARGE">XL</option>
                       </select>
-                      <select
+                      {/* <select
                               value={qty}
                               onChange={(e) => setQty(e.target.value)}
                             >
@@ -82,7 +82,7 @@ export default function ProductScreen(props) {
                                   </option>
                                 )
                               )}
-                            </select>
+                            </select> */}
 
                     <br></br>
                     <br />

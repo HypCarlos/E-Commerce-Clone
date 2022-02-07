@@ -6,8 +6,11 @@ import Navbar from "./components/navbar/Navbar";
 import ProductScreen from "./screens/ProductScreen";
 import HomeScreen from "./screens/HomeScreen";
 import CartScreen from "./screens/CartScreen";
+import { useSelector } from "react-redux";
 
 function App() {
+
+  // const cart = useSelector(state =>)
   return (
     <BrowserRouter>
       <div className="App">
