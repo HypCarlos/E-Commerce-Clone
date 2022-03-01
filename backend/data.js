@@ -40,7 +40,25 @@ export const products = [
         shipTime: "SHIPS IN 5 WEEKS",
         price: 90.00,
         inv: 100
+    }, 
+    {
+    id:5,
+        name: "DOVE HOODIE",
+        img: "https://cdn.shopify.com/s/files/1/0607/2113/5828/products/DOVEHOODIEFRONT_750x.jpg?v=1645508923",
+        material: "100% COTTON DOUBLE-LAYERED HOODIE",
+        gender: "UNISEX",
+        shipTime: "SHIPS IN 4-8 WEEKS",
+        price: 240.00,
+        inv: 10
     }
-   
-
+    // {
+    //     id:6,
+    //     name: "PADDED DENIM JACKET",
+    //     img: "https://cdn.shopify.com/s/files/1/0607/2113/5828/products/PADDEDDENIMJACKETFRONT_750x.jpg?v=1645509059",
+    //     material: "100% COTTON",
+    //     gender: "UNISEX",
+    //     shipTime: "SHIPS IN 4-8 WEEKS",
+    //     price: 440.00,
+    //     inv: 4
+    // }
 ]

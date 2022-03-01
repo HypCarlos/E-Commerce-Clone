@@ -26,6 +26,6 @@ app.get('/', (req,res) => {
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
-    console.log(`SERVER IS RUNNING ON https://localhost:${port}`);
+    console.log(`SERVER IS RUNNING ON http://localhost:${port}/`);
 });
 

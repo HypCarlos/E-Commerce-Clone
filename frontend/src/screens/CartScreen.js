@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import "../index.css";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart } from "../components/actions/cartActions";
@@ -18,15 +19,21 @@ export default function CartScreen(props) {
     }
   }, [dispatch, productId, qty]);
 
-
-  const removeFromCartHandler = (id) => {
-
-  };
+  const removeFromCartHandler = (id) => {};
   return (
-    <div>
+    <div className="shopping-cart">
       <div className="top row">
         <div className="col 2">
-          <h1>Shopping Cart</h1>
+          {/* <h1>Shopping Cart</h1> */}
+          <div className="cart-header">
+            <h4 id= "product-header">PRODUCT</h4>
+            <h4 id= "price-header">PRICE</h4>
+            <h4 id= "qty-header">QTY</h4>
+            <h4 id= "total-header">TOTAL</h4>
+            
+            
+          </div>
+          <h4 id="product-header">LIMIT 10 ITEMS PER CUSTOMER</h4>
           {cartItems.length === 0 ? (
             <h2>
               CART IS EMPTY
@@ -38,16 +45,21 @@ export default function CartScreen(props) {
               {cartItems.map((item) => (
                 <li key={item.product}>
                   <div className="row">
+                  <div className="min-30">
+                      <Link to={`/product/${item.product}`}>
+                        <br/>
+                        <h4>{item.name}</h4>
+                      </Link>
+                      <h4>{item.shipTime}</h4>
+                    </div>
                     <div>
-                      <img
+                      <img 
                         src={item.img}
                         alt={item.name}
-                        className="small"
+                        className="cart-img"
                       ></img>
                     </div>
-                    <div className="min-30">
-                      <Link to={`/product/${item.product}`}> {item.name} </Link>
-                    </div>
+                   
                     <div>
                       <select
                         value={item.qty}
@@ -58,18 +70,21 @@ export default function CartScreen(props) {
                           )
                         }
                       >
-                        {[...Array(item.inv).keys()].map( (x) => (
-                        <option key={x + 1} value={x + 1}>
-                          {x + 1}
-                        </option>
-                        ) )}
+                        {[...Array(item.inv).keys()].map((x) => (
+                          <option key={x + 1} value={x + 1}>
+                            {x + 1}
+                          </option>
+                        ))}
                       </select>
                     </div>
                     <div>
-                      ${item.price}
+                      <h4>${item.price}</h4>
                     </div>
                     <div>
-                      <button type= "button" onClick={() => removeFromCartHandler(item.product)}>
+                      <button
+                        type="button"
+                        onClick={() => removeFromCartHandler(item.product)}
+                      >
                         -
                       </button>
                     </div>
@@ -79,6 +94,9 @@ export default function CartScreen(props) {
             </ul>
           )}
         </div>
+      </div>
+      <div className="total">
+         {/* <h1>{{totalPrice += {item.price}}</h1>  */}
       </div>
     </div>
   );

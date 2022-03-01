@@ -7,7 +7,7 @@ return (
         <div className="product-disp">
 
         </div>
-        <img src= {props.img} alt="" className= "p-img"/>
+        <img id= "home-pic" src= {props.img} alt="" className= "p-img"/>
     </div>
 )
 }
