@@ -50,7 +50,7 @@ export default function CartScreen(props) {
                         <br/>
                         <h4>{item.name}</h4>
                       </Link>
-                      <h4>{item.shipTime}</h4>
+                      
                     </div>
                     <div>
                       <img 
@@ -60,7 +60,7 @@ export default function CartScreen(props) {
                       ></img>
                     </div>
                    
-                    <div>
+                    <div className="change-qty">
                       <select
                         value={item.qty}
                         onChange={(e) =>
@@ -77,7 +77,8 @@ export default function CartScreen(props) {
                         ))}
                       </select>
                     </div>
-                    <div>
+                    
+                    <div className="item-price">
                       <h4>${item.price}</h4>
                     </div>
                     <div>
