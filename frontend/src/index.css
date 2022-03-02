@@ -9,6 +9,7 @@
 }
 
 .cart-header h4{
+    
     display: inline;
     justify-content:space-between;
     margin-left: 170px;
@@ -19,7 +20,8 @@
     /* margin-bottom: 30px; */
 }
 .shopping-cart{
-    height: 1100px;
+    
+    height: 700px;
     padding: 160px;
 }
 

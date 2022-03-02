@@ -64,12 +64,14 @@ export default function ProductScreen(props) {
 
               {product.inv > 0 ? (
                 <span className="success">
-                  <form>
-                    <select name="variant">
+                  <form >
+                    <select id= "drop-down" name="variant">
+                    
                       <option value="SMALL">S</option>
                       <option value="MEDIUM">M</option>
                       <option value="LARGE">L</option>
                       <option value="X-LARGE">XL</option>
+                      
                       </select>
                       {/* <select
                               value={qty}
@@ -86,7 +88,7 @@ export default function ProductScreen(props) {
 
                     <br></br>
                     <br />
-                    <button onClick={addToCartHandler}>ADD TO CART</button>
+                    <button id= "atc-btn" onClick={addToCartHandler}>ADD TO CART +</button>
                   </form>
                 </span>
               ) : (

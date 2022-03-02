@@ -2,6 +2,8 @@
     display: flex;
     height: 90vh;
     
+
+    
 }
 .back-btn{
     position: absolute;
@@ -9,20 +11,41 @@
 }
 .product-left{
     flex: 1;
+    
 }
 
 
 .product-right{
     flex: 1;
-}
-
-.product-image{
-    margin:25% 60%;
-    justify-content: center;
     
 }
 
+.product-image{
+    margin:15% 60%;
+    justify-content: center;
+}
+
 .product-desc{
-    margin: 25% 10%;
+    margin: 25% 12%;
+    
+   
+
+    /* background-color: red; */
+}
+
+#drop-down{
+    border:0px;
+   outline:0px;
+   font-weight: bold;
+   font-size: 16px;
+   background-color: transparent;
+}
+
+#atc-btn{
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    cursor:pointer;
 }
 
