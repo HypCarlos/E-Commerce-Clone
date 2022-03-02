@@ -1,3 +1,4 @@
 # E-Commerce-Clone
 Clone of the Yzy Gap website using React.js, Node.js that looks and behaves just like deployed site. 
-![Screen Shot 2022-03-01 at 10 21 08 PM](https://user-images.githubusercontent.com/66544442/156288832-c85f9ec3-3d8b-4c90-b7e7-bc5d4f7ffc46.png)
+
+![Screen Shot 2022-03-01 at 10 22 11 PM](https://user-images.githubusercontent.com/66544442/156288894-21564686-c6bc-464d-b86f-c4e1267a776e.png)
