@@ -1,3 +1,10 @@
+# E-Commerce-Clone
+
+Clone of the Yzy Gap website using React.js, Node.js that looks and behaves just like deployed site.
+
+![image](https://user-images.githubusercontent.com/66544442/185823721-30ee27ef-0a14-4ee6-9150-b9e12958dc1f.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
